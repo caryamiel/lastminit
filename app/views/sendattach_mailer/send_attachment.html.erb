@@ -1,0 +1,11 @@
+<h2>
+	Hello! <%= @sendattach.name%> has send a file to you.
+</h2>
+<p>
+<%= @sendattach.description%>
+</p>
+
+<p>
+here is the file.
+</p>
+<a href="http://desolate-inlet-33372.herokuapp.com<%= @sendattach.attachment_url%>">Download file</a>

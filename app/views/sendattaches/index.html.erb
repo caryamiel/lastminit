@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Sendattaches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Description</th>
+      <th>Attachment</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sendattaches.each do |sendattach| %>
+      <tr>
+        <td><%= sendattach.name %></td>
+        <td><%= sendattach.email %></td>
+        <td><%= sendattach.description %></td>
+        <td><%= sendattach.attachment %></td>
+        <td><%= link_to 'Show', sendattach %></td>
+        <td><%= link_to 'Edit', edit_sendattach_path(sendattach) %></td>
+        <td><%= link_to 'Destroy', sendattach, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Sendattach', new_sendattach_path %>

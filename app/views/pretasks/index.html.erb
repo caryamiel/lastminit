@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pretasks</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pretasks.each do |pretask| %>
+      <tr>
+        <td><%= pretask.name %></td>
+        <td><%= link_to 'Show', pretask %></td>
+        <td><%= link_to 'Edit', edit_pretask_path(pretask) %></td>
+        <td><%= link_to 'Destroy', pretask, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pretask', new_pretask_path %>

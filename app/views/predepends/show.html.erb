@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Pretask:</strong>
+  <%= @predepend.pretask_id %>
+</p>
+
+<p>
+  <strong>Pretaskdependto:</strong>
+  <%= @predepend.pretaskdependto_id %>
+</p>
+
+<%= link_to 'Edit', edit_predepend_path(@predepend) %> |
+<%= link_to 'Back', predepends_path %>

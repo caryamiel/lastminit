@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Taskdepends</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Task</th>
+      <th>Taskdependto</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @taskdepends.each do |taskdepend| %>
+      <tr>
+        <td><%= taskdepend.task_id %></td>
+        <td><%= taskdepend.taskdependto_id %></td>
+        <td><%= link_to 'Show', taskdepend %></td>
+        <td><%= link_to 'Edit', edit_taskdepend_path(taskdepend) %></td>
+        <td><%= link_to 'Destroy', taskdepend, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Taskdepend', new_taskdepend_path %>

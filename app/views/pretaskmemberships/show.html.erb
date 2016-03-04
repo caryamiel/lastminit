@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @pretaskmembership.user_id %>
+</p>
+
+<p>
+  <strong>Pretask:</strong>
+  <%= @pretaskmembership.pretask_id %>
+</p>
+
+<p>
+  <strong>Pretmember:</strong>
+  <%= @pretaskmembership.pretmember %>
+</p>
+
+<%= link_to 'Edit', edit_pretaskmembership_path(@pretaskmembership) %> |
+<%= link_to 'Back', pretaskmemberships_path %>

@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Pretaskmemberships</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Pretask</th>
+      <th>Pretmember</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pretaskmemberships.each do |pretaskmembership| %>
+      <tr>
+        <td><%= pretaskmembership.user_id %></td>
+        <td><%= pretaskmembership.pretask_id %></td>
+        <td><%= pretaskmembership.pretmember %></td>
+        <td><%= link_to 'Show', pretaskmembership %></td>
+        <td><%= link_to 'Edit', edit_pretaskmembership_path(pretaskmembership) %></td>
+        <td><%= link_to 'Destroy', pretaskmembership, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pretaskmembership', new_pretaskmembership_path %>

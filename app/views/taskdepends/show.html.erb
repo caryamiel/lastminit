@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Task:</strong>
+  <%= @taskdepend.task_id %>
+</p>
+
+<p>
+  <strong>Taskdependto:</strong>
+  <%= @taskdepend.taskdependto_id %>
+</p>
+
+<%= link_to 'Edit', edit_taskdepend_path(@taskdepend) %> |
+<%= link_to 'Back', taskdepends_path %>
